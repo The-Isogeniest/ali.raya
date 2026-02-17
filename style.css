@@ -1,0 +1,175 @@
+/* ---------- Theme Variables ---------- */
+:root {
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --nav: #e5e7eb;
+  --tab: #ffffff;
+  --tab-active: #111827;
+  --tab-active-text: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.08);
+  --border: rgba(0, 0, 0, 0.08);
+}
+
+html[data-theme="dark"] {
+  --bg: #0b1220;
+  --card: #0f1a30;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --nav: #0f1a30;
+  --tab: #111c33;
+  --tab-active: #e5e7eb;
+  --tab-active-text: #0b1220;
+  --shadow: rgba(0, 0, 0, 0.35);
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+/* ---------- Base ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.2s, color 0.2s;
+}
+
+/* ---------- Layout ---------- */
+header {
+  max-width: 980px;
+  margin: 26px auto 0 auto;
+  padding: 0 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+header p {
+  margin: 4px 0 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.theme-btn {
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 8px 24px var(--shadow);
+  transition: transform 0.1s;
+  white-space: nowrap;
+}
+
+.theme-btn:active {
+  transform: scale(0.98);
+}
+
+/* ---------- Tabs ---------- */
+nav {
+  max-width: 980px;
+  margin: 16px auto 0 auto;
+  padding: 10px 16px;
+
+  display: flex;
+  gap: 10px;
+
+  background: var(--nav);
+  border-radius: 14px;
+  border: 1px solid var(--border);
+
+  /* mobile friendly */
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+nav::-webkit-scrollbar {
+  height: 0px; /* hides scrollbar */
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  background: var(--tab);
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  transition: 0.15s;
+
+  /* important for mobile scrolling */
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+nav a:hover {
+  transform: translateY(-1px);
+}
+
+nav a.active {
+  background: var(--tab-active);
+  color: var(--tab-active-text);
+  border: 1px solid transparent;
+}
+
+/* ---------- Main Card ---------- */
+main {
+  max-width: 980px;
+  margin: 16px auto 40px auto;
+  padding: 20px 16px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 14px 40px var(--shadow);
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.small {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* ---------- Responsive Rules ---------- */
+@media (max-width: 650px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
+
+  .theme-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .card {
+    padding: 16px;
+    border-radius: 16px;
+  }
+}
