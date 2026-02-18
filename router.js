@@ -1,20 +1,55 @@
+let homeContent = "";
+
 async function loadPage(page) {
-  if (page === "home") return;
-
-  const response = await fetch(page + ".html");
-  const text = await response.text();
-
-  const parser = new DOMParser();
-  const doc = parser.parseFromString(text, "text/html");
-  const newContent = doc.querySelector("main").innerHTML;
 
   const main = document.querySelector("main");
-  main.classList.add("fade-out");
 
-  setTimeout(() => {
-    main.innerHTML = newContent;
-    main.classList.remove("fade-out");
-  }, 150);
+  // Save original home content once
+  if (!homeContent) {
+    homeContent = main.innerHTML;
+  }
+
+  // If home, restore original content
+  if (page === "home") {
+    main.classList.add("fade-out");
+
+    setTimeout(() => {
+      main.innerHTML = homeContent;
+      main.classList.remove("fade-out");
+      setActiveLink("home");
+    }, 150);
+
+    return;
+  }
+
+  try {
+    const response = await fetch(page + ".html");
+    const text = await response.text();
+
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(text, "text/html");
+    const newContent = doc.querySelector("main").innerHTML;
+
+    main.classList.add("fade-out");
+
+    setTimeout(() => {
+      main.innerHTML = newContent;
+      main.classList.remove("fade-out");
+      setActiveLink(page);
+    }, 150);
+
+  } catch (err) {
+    console.error("Page load error:", err);
+  }
+}
+
+function setActiveLink(page) {
+  document.querySelectorAll(".nav-link").forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + page) {
+      link.classList.add("active");
+    }
+  });
 }
 
 function navigate() {
@@ -22,15 +57,5 @@ function navigate() {
   loadPage(hash);
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  navigate();
-
-  document.querySelectorAll(".nav-link").forEach(link => {
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-      window.location.hash = link.getAttribute("href");
-    });
-  });
-});
-
-window.addEventListener("hashchange", navigate);
+document.addEventListener("DOMContentLoaded", navigate);
+window.addEventListe
