@@ -1,50 +1,273 @@
+/* ============================= */
+/*          THEME COLORS         */
+/* ============================= */
+
+:root {
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --nav: #e5e7eb;
+  --accent: #2563eb;
+  --border: rgba(0, 0, 0, 0.08);
+  --shadow: rgba(0, 0, 0, 0.08);
+}
+
+html[data-theme="dark"] {
+  --bg: #0b1220;
+  --card: #0f1a30;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --nav: #0f1a30;
+  --accent: #60a5fa;
+  --border: rgba(255, 255, 255, 0.08);
+  --shadow: rgba(0, 0, 0, 0.35);
+}
+
+/* ============================= */
+/*           BASE RESET          */
+/* ============================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.2s, color 0.2s;
+  line-height: 1.6;
+}
+
+/* ============================= */
+/*            HEADER             */
+/* ============================= */
+
+header {
+  max-width: 1000px;
+  margin: 30px auto 0 auto;
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.brand p {
+  margin: 4px 0 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.theme-btn {
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  padding: 10px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 10px 30px var(--shadow);
+  transition: 0.2s;
+}
+
+.theme-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* ============================= */
+/*            NAVIGATION         */
+/* ============================= */
+
+nav {
+  max-width: 1000px;
+  margin: 20px auto 0 auto;
+  padding: 12px 20px;
+
+  display: flex;
+  gap: 10px;
+
+  background: var(--nav);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+
+  overflow-x: auto;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 12px;
+  color: var(--text);
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+nav a:hover {
+  background: var(--card);
+}
+
+nav a.active {
+  background: var(--accent);
+  color: white;
+}
+
+/* ============================= */
+/*              MAIN             */
+/* ============================= */
+
+main {
+  max-width: 1000px;
+  margin: 30px auto 60px auto;
+  padding: 0 20px;
+  transition: opacity 0.15s ease-in-out;
+}
+
+/* ============================= */
+/*              CARD             */
+/* ============================= */
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 20px 50px var(--shadow);
+}
+
+/* ============================= */
+/*        PROFILE SECTION        */
+/* ============================= */
+
+.center {
+  text-align: center;
+}
+
 .profile-pic {
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 20px;
   box-shadow: 0 15px 40px var(--shadow);
 }
 
-.center {
-  text-align: center;
-}
+/* ============================= */
+/*            BUTTONS            */
+/* ============================= */
 
 .button-group {
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 .btn {
   display: inline-block;
-  padding: 8px 14px;
-  margin: 5px;
-  border-radius: 10px;
+  padding: 8px 16px;
+  margin: 6px;
+  border-radius: 12px;
   border: 1px solid var(--border);
-  background: var(--tab);
+  background: var(--card);
   color: var(--text);
   text-decoration: none;
   transition: 0.2s;
+  font-size: 14px;
 }
 
 .btn:hover {
   transform: translateY(-2px);
+  border-color: var(--accent);
 }
 
 .btn.small {
+  padding: 6px 12px;
   font-size: 13px;
-  padding: 6px 10px;
 }
 
+/* ============================= */
+/*          PAPER CARDS          */
+/* ============================= */
+
 .paper-card {
-  margin-top: 20px;
-  padding: 16px;
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 16px;
   border: 1px solid var(--border);
-  border-radius: 14px;
   background: var(--card);
+  box-shadow: 0 10px 30px var(--shadow);
 }
+
+.paper-card h3 {
+  margin-top: 0;
+  margin-bottom: 6px;
+}
+
+/* ============================= */
+/*            HEADINGS           */
+/* ============================= */
+
+h2 {
+  margin-top: 0;
+  font-weight: 600;
+}
+
+h3 {
+  margin-top: 30px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+/* ============================= */
+/*           LIST STYLE          */
+/* ============================= */
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+/* ============================= */
+/*         FADE TRANSITION       */
+/* ============================= */
 
 .fade-out {
   opacity: 0;
-  transition: opacity 0.15s;
+}
+
+/* ============================= */
+/*          RESPONSIVE           */
+/* ============================= */
+
+@media (max-width: 700px) {
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .theme-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .card {
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .profile-pic {
+    width: 130px;
+    height: 130px;
+  }
+
 }
