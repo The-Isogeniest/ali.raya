@@ -152,12 +152,12 @@ main {
 }
 
 .profile-pic {
-  width: 160px;
-  height: 160px;
+  width: 280px;
+  height: 280px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 20px;
-  box-shadow: 0 15px 40px var(--shadow);
+  margin-bottom: 25px;
+  box-shadow: 0 20px 60px var(--shadow);
 }
 
 /* ============================= */
@@ -266,8 +266,8 @@ li {
   }
 
   .profile-pic {
-    width: 130px;
-    height: 130px;
+    width: 180px;
+    height: 180px;
   }
 
 }
