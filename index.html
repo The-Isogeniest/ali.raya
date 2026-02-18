@@ -1,41 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home</title>
+  <title>Ali Raya</title>
   <link rel="stylesheet" href="style.css" />
   <script src="theme.js"></script>
 </head>
 <body>
 
-  <header>
-    <div class="brand">
-      <h1>Ali Raya</h1>
-      <p>Tabs + Dark/Light mode (GitHub Pages)</p>
+<header>
+  <div class="brand">
+    <h1>Ali Raya</h1>
+    <p>Lattice-Based & Post-Quantum Cryptography</p>
+  </div>
+  <button id="themeToggle" class="theme-btn">🌙 Dark Mode</button>
+</header>
+
+<nav>
+  <a href="#home" class="nav-link">Home</a>
+  <a href="#research" class="nav-link">Research</a>
+  <a href="#academics" class="nav-link">Academics</a>
+  <a href="#activities" class="nav-link">Activities</a>
+</nav>
+
+<main>
+  <div class="card center">
+    <img src="photo.jpg" class="profile-pic" alt="Profile photo">
+
+    <h2>About Me</h2>
+    <p>
+      I work in lattice-based cryptography and post-quantum secure constructions,
+      focusing on algebraic structures in NTRU-type schemes and structural cryptanalysis.
+    </p>
+
+    <div class="button-group">
+      <a href="Ali_Raya_CV.pdf" class="btn" download>Download CV</a>
+      <a href="#" class="btn">Google Scholar</a>
+      <a href="#" class="btn">GitHub</a>
+      <a href="mailto:yourmail@example.com" class="btn">Email</a>
     </div>
-    <button id="themeToggle" class="theme-btn">🌙 Dark Mode</button>
-  </header>
+  </div>
+</main>
 
-  <nav>
-    <a class="active" href="index.html">Home</a>
-    <a href="research.html">Research</a>
-    <a href="academics.html">Academics</a>
-    <a href="activities.html">Activities</a>
-  </nav>
-
-  <main>
-    <div class="card">
-      <h2>Home</h2>
-      <p class="small">This is the homepage.</p>
-      <p>
-        This template supports:
-        <br>✅ multi-page navigation
-        <br>✅ dark/light mode toggle
-        <br>✅ remembers user choice
-      </p>
-    </div>
-  </main>
-
+<script src="router.js"></script>
 </body>
 </html>
