@@ -152,8 +152,8 @@ main {
 }
 
 .profile-pic {
-  width: 260px;
-  height: 320px;           /* portrait shape */
+  width: 320px;
+  height: 260px;           /* portrait shape */
   border-radius: 16px;     /* soft rounded corners */
   object-fit: cover;
   margin-bottom: 20px;
