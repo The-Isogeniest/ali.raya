@@ -244,6 +244,20 @@ li {
   opacity: 0;
 }
 
+.home-layout {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.home-photo {
+  flex: 0 0 auto;
+}
+
+.home-content {
+  flex: 1;
+}
+
 /* ============================= */
 /*          RESPONSIVE           */
 /* ============================= */
@@ -265,9 +279,19 @@ li {
     border-radius: 16px;
   }
 
+ .home-layout {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-content {
+    text-align: center;
+  }
+
   .profile-pic {
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 260px;
   }
 
 }
+
