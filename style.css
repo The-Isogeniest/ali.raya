@@ -14,14 +14,14 @@
 }
 
 html[data-theme="dark"] {
-  --bg: #0b1220;
-  --card: #0f1a30;
-  --text: #e5e7eb;
-  --muted: #9ca3af;
-  --nav: #0f1a30;
-  --accent: #60a5fa;
-  --border: rgba(255, 255, 255, 0.08);
-  --shadow: rgba(0, 0, 0, 0.35);
+  --bg: #121826;          /* softer background */
+  --card: #1c2433;        /* lighter card */
+  --text: #e6edf3;        /* clearer white */
+  --muted: #a0aec0;       /* softer grey */
+  --nav: #1c2433;
+  --accent: #4f8cff;      /* professional blue */
+  --border: rgba(255, 255, 255, 0.12);
+  --shadow: rgba(0, 0, 0, 0.25);
 }
 
 /* ============================= */
