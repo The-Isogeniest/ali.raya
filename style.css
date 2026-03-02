@@ -87,6 +87,15 @@ header {
 /*            NAVIGATION         */
 /* ============================= */
 
+a {
+  text-decoration: none;
+  color: inherit; /* same color as normal text */
+}
+
+a:hover {
+  color: var(--accent); /* subtle hover */
+}
+
 nav {
   max-width: 1000px;
   margin: 20px auto 0 auto;
