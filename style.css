@@ -40,9 +40,7 @@ body {
   line-height: 1.6;
   transition: background 0.2s, color 0.2s;
   
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
+
 }
 
 /* ============================= */
@@ -140,7 +138,7 @@ main {
   margin:30px auto 60px;
   padding:0 20px;
   transition:opacity 0.15s ease-in-out;
-  flex:1;
+ 
 }
 
 /* ============================= */
