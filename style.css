@@ -39,6 +39,10 @@ body {
   color: var(--text);
   line-height: 1.6;
   transition: background 0.2s, color 0.2s;
+  
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
 }
 
 /* ============================= */
@@ -136,6 +140,7 @@ main {
   margin:30px auto 60px;
   padding:0 20px;
   transition:opacity 0.15s ease-in-out;
+  flex:1;
 }
 
 /* ============================= */
@@ -326,7 +331,7 @@ li {
 
 .site-footer{
   max-width:1000px;
-  margin:40px auto 30px auto;
+  margin:50px auto 30px auto;
   padding:0 20px;
   text-align:center;
   font-size:0.9rem;
