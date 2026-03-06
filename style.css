@@ -14,8 +14,8 @@
 }
 
 html[data-theme="dark"] {
-  --bg: #1b2230;        /* lighter than before */
-  --card: #242d3f;      /* softer dark card */
+  --bg: #1b2230;
+  --card: #242d3f;
   --text: #e6edf3;
   --muted: #a0aec0;
   --nav: #242d3f;
@@ -39,8 +39,10 @@ body {
   color: var(--text);
   line-height: 1.6;
   transition: background 0.2s, color 0.2s;
-  
 
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
 }
 
 /* ============================= */
@@ -138,7 +140,8 @@ main {
   margin:30px auto 60px;
   padding:0 20px;
   transition:opacity 0.15s ease-in-out;
- 
+
+  flex:1;
 }
 
 /* ============================= */
@@ -151,6 +154,8 @@ main {
   border-radius:20px;
   padding:30px;
   box-shadow:0 20px 50px var(--shadow);
+
+  margin-bottom:28px;
 }
 
 /* ============================= */
@@ -216,14 +221,10 @@ main {
   transition:transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-/* hover lift effect */
-
 .paper-card:hover {
   transform:translateY(-3px);
   box-shadow:0 16px 45px var(--shadow);
 }
-
-/* paper title */
 
 .paper-title {
   font-size:1.15rem;
@@ -231,14 +232,10 @@ main {
   margin-bottom:4px;
 }
 
-/* authors */
-
 .paper-authors {
   font-size:0.95rem;
   color:var(--muted);
 }
-
-/* venue */
 
 .paper-venue {
   font-size:0.9rem;
@@ -246,15 +243,11 @@ main {
   margin-bottom:8px;
 }
 
-/* research note */
-
 .research-note {
   color:var(--muted);
   margin-bottom:25px;
   font-style:italic;
 }
-
-/* description spacing */
 
 .paper-card p {
   margin-top:6px;
@@ -276,11 +269,12 @@ main {
 
 h2 {
   margin-top:0;
+  margin-bottom:16px;
   font-weight:600;
 }
 
 h3 {
-  margin-top:30px;
+  margin-top:22px;
   margin-bottom:8px;
   font-weight:500;
 }
@@ -291,6 +285,7 @@ h3 {
 
 ul {
   padding-left:20px;
+  margin-top:8px;
 }
 
 li {
