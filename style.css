@@ -69,8 +69,8 @@ html[data-theme="dark"] body::before{
     linear-gradient(90deg, rgba(160,180,255,0.08) 1px, transparent 1px);
 }
 
-/* moving light along lattice */
-
+/*  moving light along lattice */
+/*
 body::after{
   content:"";
   position:fixed;
@@ -108,7 +108,7 @@ html[data-theme="dark"] body::after{
       rgba(160,190,255,0.08) 50%,
       transparent 55%
     );
-}
+} */
 
 
 /* ============================= */
