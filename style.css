@@ -298,6 +298,13 @@ margin:4px 0;
   font-size:13px;
 }
 
+.cv-btn{
+display:block;
+margin:12px auto 8px auto;
+width:160px;
+text-align:center;
+}
+
 /* ============================= */
 /*          PAPER CARDS          */
 /* ============================= */
