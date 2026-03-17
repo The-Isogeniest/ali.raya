@@ -69,6 +69,48 @@ html[data-theme="dark"] body::before{
     linear-gradient(90deg, rgba(160,180,255,0.08) 1px, transparent 1px);
 }
 
+/* moving light along lattice */
+
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+
+  background:
+    linear-gradient(
+      120deg,
+      transparent 45%,
+      rgba(120,140,220,0.06) 50%,
+      transparent 55%
+    );
+
+  background-size:400px 400px;
+
+  animation:latticeFlow 28s linear infinite;
+}
+
+@keyframes latticeFlow{
+  from{
+    transform:translateX(-200px) translateY(-200px);
+  }
+  to{
+    transform:translateX(200px) translateY(200px);
+  }
+}
+
+html[data-theme="dark"] body::after{
+  background:
+    linear-gradient(
+      120deg,
+      transparent 45%,
+      rgba(160,190,255,0.08) 50%,
+      transparent 55%
+    );
+}
+
+
 /* ============================= */
 /*            HEADER             */
 /* ============================= */
