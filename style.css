@@ -298,6 +298,17 @@ li {
   margin-bottom:6px;
 }
 
+.project-list li {
+    margin-bottom: 18px;
+    line-height: 1.5;
+}
+
+.project-list em {
+    font-style: italic;
+    color: #444;
+}
+
+
 /* ============================= */
 /*         FADE TRANSITION       */
 /* ============================= */
