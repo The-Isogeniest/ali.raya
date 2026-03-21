@@ -124,6 +124,7 @@ header {
   align-items:center;
   justify-content:space-between;
   gap:15px;
+  flex-wrap: wrap;   /* FIX */
 }
 
 .brand h1 {
@@ -274,32 +275,33 @@ margin:4px 0;
 /* ============================= */
 
 
+
 .about-page {
     width: 100%;
-    max-width: 100%;   /* use full main width */
+    max-width: 100%;
     line-height: 1.7;
 }
 
-/* PHOTO STYLE */
+/* CENTERED PHOTO */
 
 .about-photo-container {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 35px;
 }
-
-.about-footer {
-    display: flex;
-    align-items: flex-end;
-    gap: 20px;
-    margin-top: 30px;
-}
-
-/* SMALL LEFT IMAGE */
 
 .about-photo {
-    width: 170px;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px var(--shadow);
+    width: 220px;              /* smaller and elegant */
+    max-width: 90%;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px var(--shadow);
+}
+
+/* CAPTION */
+
+.photo-caption {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-top: 10px;
 }
 
 /* CAPTION */
@@ -484,9 +486,18 @@ li {
 
 @media (max-width:700px) {
 
-  header {
+   header {
     flex-direction:column;
     align-items:flex-start;
+    gap:10px;
+  }
+
+  .brand h1 {
+    font-size:24px;
+  }
+
+  nav {
+    flex-wrap: wrap;   /*  prevents overflow when adding tabs */
   }
 
   .theme-btn {
