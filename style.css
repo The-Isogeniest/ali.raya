@@ -286,26 +286,28 @@ margin:4px 0;
 
 .about-photo-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;   /*  TRUE horizontal centering */
-    justify-content: center;
+    flex-direction: column;   /* stack vertically */
+    align-items: center;      /* center horizontally */
     margin-top: 35px;
 }
+
+/* IMAGE */
 
 .about-photo {
     width: 220px;
     max-width: 90%;
     border-radius: 14px;
     box-shadow: 0 8px 25px var(--shadow);
-    display: block;        /*  prevents inline shift */
-    margin: 0 auto;        /* extra safety */
+    display: block;
 }
 
 /* CAPTION */
+
 .photo-caption {
+    margin-top: 10px;
     font-size: 0.85rem;
     color: var(--muted);
-    margin-top: 10px;
+    text-align: center;       /* center text */
 }
 
 /* CAPTION */
