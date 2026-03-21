@@ -1,8 +1,9 @@
 <!-- ABOUT ME PAGE -->
 <main>
-<div id="about" class="card about-page" style="display:none;">
 
-<h2>About Me</h2>
+<div id="about" class="card about-page">
+
+
 
 <p>
 During my Bachelor’s degree in Software Engineering, I was introduced to cryptography through a single course. My real passion for the subject started during my Master’s degree. During COVID, I began reading on my own about the beautiful mathematics behind isogenies and how they can be used to establish a shared key between two parties. (That’s also why I chose the name <i>isogeniest</i> for my GitHub, even though I am no longer working on isogenies.)
@@ -20,17 +21,22 @@ Beyond research, I enjoy foosball, drinking yerba mate, and swimming—especiall
 
 <div class="about-photo-container">
 
-<img src="files/med_photo.jpg" alt="Mediterranean moment" class="about-photo">
+<img src="files/med_photo.jpg"
+     alt="Mediterranean moment"
+     class="about-photo">
 
 <p class="photo-caption">A quiet moment by the Mediterranean</p>
 
 </div>
 
 </div>
+
 <footer class="site-footer">
 © <span id="year"></span> Ali Raya. All rights reserved.
 </footer>
 
+</main>
+
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
-</main>
+</script>
