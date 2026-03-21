@@ -285,19 +285,23 @@ margin:4px 0;
 /* CENTERED PHOTO */
 
 .about-photo-container {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /*  TRUE horizontal centering */
+    justify-content: center;
     margin-top: 35px;
 }
 
 .about-photo {
-    width: 220px;              /* smaller and elegant */
+    width: 220px;
     max-width: 90%;
     border-radius: 14px;
     box-shadow: 0 8px 25px var(--shadow);
+    display: block;        /*  prevents inline shift */
+    margin: 0 auto;        /* extra safety */
 }
 
 /* CAPTION */
-
 .photo-caption {
     font-size: 0.85rem;
     color: var(--muted);
